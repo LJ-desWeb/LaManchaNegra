@@ -16,9 +16,15 @@ body {
   font-family: 'Pirata One', cursive;
   /* background: url('../img/000_02_-fotoarena-_10_.webp') no-repeat center top;
   background-size: cover;
-  background-attachment: fixed;  background-color: rgb(233, 221, 221); ackground: #F0DBB9;*/
+  background-attachment: fixed;  background-color: rgb(233, 221, 221); ackground: #F0DBB9;
   background: #F0DBB9;
   background: linear-gradient(176deg,rgba(240, 219, 185, 1) 0%, rgba(235, 222, 204, 1) 50%, rgba(163, 109, 34, 1) 100%);
+  */
+  background: #FCEABB;
+  background: linear-gradient(to right, #FCEABB 0%, #F8E4BB 51%, #FBDF93 100%);
+  
+  
+ 
   
 }
 /*  ------------------------------------------------------ HEADER -----------------------------------------------------*/
@@ -41,44 +47,8 @@ header.header {
 }
 /*  ------------------------------------------- fin datos generales de HEADER -----------------------------------------*/
 
-
 /* ============================================= Menú Pirata ========================================================== */
 /* ============================================= Menú Pirata ========================================================== */
-/* ============================================= Menú Pirata ========================================================== */
-
-/*
-.menu {
-      display: flex;
-      gap: 5rem;
-  justify-content: center;
-      align-items: center;
-  padding: 1rem 0;
-}
-.menu a {
-      text-decoration: none;
-  color: goldenrod;
-      font-size: 3.5rem;  
-  transition: all 0.3s ease;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.menu .titnav {
-  margin-top: 0.2rem;
-}
-.menu a:hover {
-  background-image: url('../img/000_03_ORO_01_.jpg');
-  background-size: cover;
-   background-repeat: no-repeat;
-  background-position: center;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  transform: scale(1.3) translate(-40px);
-
-}
-*/
-
 .menu {
   display: flex;
   gap: 5rem;
@@ -86,7 +56,6 @@ header.header {
   align-items: center;
   padding: 1rem 0;
 }
-
 .menu a {
   text-decoration: none;
   color: goldenrod;
@@ -97,11 +66,9 @@ header.header {
   align-items: center;
   will-change: transform;
 }
-
 .menu .titnav {
   margin-top: 0.2rem;
 }
-
 .menu a:hover {
   background-image: url('../img/000_03_ORO_01_.jpg');
   background-size: cover;
@@ -113,8 +80,6 @@ header.header {
   transform: scale(1.3); /* Menor escala para mantener la legibilidad */
   filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5)); /* sombra externa sin afectar el fondo */
 }
-
-
 /* ----- efecto Segundo enlace: vibrar imagen de cartas --------- */
 .enlace-vibrante img.cartas {
   width: 8vw; /* 60px */
@@ -132,19 +97,16 @@ header.header {
   80% { transform: translate(2px, 2px); }
   100% { transform: translate(0); }
 }
-/* ============================================= Menú Pirata ========================================================== */
+/* ========================================= FIN Menú Pirata ========================================================== */
 
 
 /*  ---------------------------------------------- LOGOS -----------------------------------------------------*/
 /*  ---------------------------------------------- LOGOS -----------------------------------------------------*/
-/*  ---------------------------------------------- LOGOS -----------------------------------------------------*/
-
 .logo-img{
   width: 7vw; /* 70px */
   transition: transform 0.3s ease;
 }
 /*  ------------------------------------------------------ LOGIN ----------------------------------------------*/
-
 .logo-img2 {
   width: 10vw; /* 70px */
   transition: transform 0.3s ease;
@@ -168,7 +130,6 @@ header.header {
   margin-right: auto;
   margin-left: auto;
 }
-
 .section {
   padding: 140px 20px 60px; /* para compensar el header fijo */
   min-height: 100vh;
@@ -195,7 +156,6 @@ h2 {
   color: #d4af37;
   text-shadow: 2px 2px #3e2e1c;
 }
-
 /* ------------------- display  ------------------------------------------- */
 .d-flex {
   display: flex !important;
@@ -226,32 +186,7 @@ h2 {
 
 
 
-/* -----------------------   RESPONSIVE HEADER-NAV ---------------------------- */
-/* -----------------------   RESPONSIVE HEADER-NAV ---------------------------- */
-/* -----------------------   RESPONSIVE HEADER-NAV ---------------------------- */
-@media (max-width: 768px) {
-  .logo-img,
-  .logo-img2 {
-    width: 50px;
-  }
 
-  .menu {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .menu a {
-    font-size: 1.2rem;
-  }
-
-  .enlace-vibrante img.cartas {
-    width: 50px;
-  }
-  header.header,
-  footer {
-    height: 15vh;
-  }
-}
 
   
 
@@ -267,8 +202,6 @@ h2 {
   color: #eee;
   padding: 3rem 1rem 2rem 1rem;
 }
-
-
 .footer-container { /*  contenedor de enlaces y texto */
   display: flex;
   flex-wrap: wrap;
@@ -276,8 +209,6 @@ h2 {
   max-width: 1200px;
   margin: auto;
 }
-
-
 .footer-col { /*  contenedor del logo, columna 1 */
   flex: 1 1 22%;
   margin: 1rem 0;
@@ -298,7 +229,6 @@ h2 {
   color: #ccc;
   font-size: 1.4rem;
   padding: 0.5rem;
-
 }
 .footer h4 {  /* contenedor -ir a inicio - datos y enlaces - columnas 2 y 4 ----- */
   color: goldenrod;
@@ -351,7 +281,6 @@ input[type="email"] {
   color: rgb(30, 223, 126);
   margin-bottom: 0.5rem;
 }
-
 .privacy-note { /*  nota privacidad suscripcion  */
   font-size: 1.1rem;
   color: #ccc;
@@ -375,8 +304,6 @@ input[type="email"] {
   font-weight: bold;
   transform:scale(1.2);
 }
-
-
 /* -------- Columna 4 - redes sociales - estilo especifico ------------ */
 .social-icons {
   list-style: none;
@@ -401,79 +328,14 @@ input[type="email"] {
   color: #ccc;
   margin: 0 0.3rem;
 }
-
-/* -----------------------   RESPONSIVE FOOTER ---------------------------- */
-/* -----------------------   RESPONSIVE FOOTER ---------------------------- */
-/* -----------------------   RESPONSIVE FOOTER ---------------------------- */
-/* Botón para mostrar menú en pantallas pequeñas */
-.footer-toggle {
-  display: none;
-  background-color: #222;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  font-size: 1.2rem;
-  cursor: pointer;
-  width: auto;           /* <– cambia de 100% a auto */
-  margin: 0 auto 1rem 1rem;  /* alinea a la izquierda con margen */
-  margin-top: 0;
-  text-align: left;
-}
-/* Contenedor del contenido colapsable */
-.footer-content {
-  overflow: hidden;
-  max-height: 999px; /* valor alto por defecto */
-  transition: max-height 0.3s ease;
-}
-/* Contenedor del botón + contenido desplegable */
-.footer-main {
-  display: block;
-}
-
-/* ---------------- Responsive para móvil ----------------------- */
-/* ---------------- Responsive para móvil ----------------------- */
-/* ---------------- Responsive para móvil ----------------------- */
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .footer-col {
-    max-width: 100%;
-    padding: 0.5rem 1rem;
-  }
-  .footer-logo {
-    max-width: 120px;
-  }
-  .footer-toggle {
-    display: block;
-  }
-  .footer-content.closed {
-    max-height: 0;
-    overflow: hidden;
-  }
-  .footer-content, .parr-1, .privacy-note {
-    color: #141413; 
-  }
-  .footer-content a {
-    color: #141413; 
-  }
-  .footer-content a:hover {
-    color: #141413;
-  } 
-  .footer-col  h4{
-    color: #7c7457; 
-  }
-
-}
+/*  ------------------------------------------------- FIN  FOOTER -----------------------------------------------------*/
+/*  ------------------------------------------------- FIN  FOOTER -----------------------------------------------------*/
 
 
 
-
-
-/*  ------------------------------------------------------ CARAJO -----------------------------------------------------*/
-/*  ------------------------------------------------------ CARAJO -----------------------------------------------------*/
-/*  ------------------------------------------------------ CARAJO -----------------------------------------------------*/
+/*  --------------------------------------- Boton arriba - CARAJO -----------------------------------------------------*/
+/*  --------------------------------------- Boton arriba - CARAJO -----------------------------------------------------*/
+/*  --------------------------------------- Boton arriba - CARAJO -----------------------------------------------------*/
     #btn-arriba {
         position: fixed; /* Mantiene el botón en una posición fija */
         bottom: 20px; /* Distancia del borde inferior de la pantalla */
@@ -509,7 +371,17 @@ input[type="email"] {
    #btn-arriba, .texto-carajo img:hover {
       background-color: rgba(122, 104, 70, 0.6);
    }
-   /* --- Estilo responsive para móviles --- */
+/* --------------------------------------- FIN Boton arriba - CARAJO -----------------------------------------------------*/
+/* --------------------------------------- FIN Boton arriba - CARAJO -----------------------------------------------------*/
+
+
+
+
+
+/* ---------------------------------------- Responsive para móvil e intermedio --------------------------------------- */
+/* ---------------------------------------- Responsive para móvil e intermedio --------------------------------------- */
+/* ---------------------------------------- Responsive para móvil e intermedio --------------------------------------- */
+   /* -------------- Responsive Boton arriba ---------------- */
     @media screen and (max-width: 600px) {
       #btn-arriba {
         bottom: 10px;
@@ -525,3 +397,190 @@ input[type="email"] {
         font-size: 12px;
       }
     }
+/* ------------- FIN Responsive Boton arriba ---------------- */
+
+/* -----------------------   RESPONSIVE FOOTER ---------------------------- */
+/* Botón para mostrar menú en pantallas pequeñas */
+      .footer-toggle {
+        display: none;
+        background-color: #222;
+        color: #fff;
+        border: none;
+        padding: 0.5rem 1rem;
+        font-size: 1.2rem;
+        cursor: pointer;
+        width: auto;           /* <– cambia de 100% a auto */
+        margin: 0 auto 1rem 1rem;  /* alinea a la izquierda con margen */
+        margin-top: 0;
+        text-align: left;
+        font-family: 'Pirata One', cursive; /* Fuente pirata */
+      }
+
+      /* Contenedor del contenido colapsable */
+      .footer-content {
+        overflow: hidden;
+        max-height: 999px; /* valor alto por defecto */
+        transition: max-height 0.3s ease;
+      }
+      /* Contenedor del botón + contenido desplegable */
+      .footer-main {
+        display: block;
+      }
+      @media (max-width: 768px) {
+        .footer-toggle {
+          display: block;
+        }
+        .footer-content.closed {
+          max-height: 0;
+          overflow: hidden;
+        }
+
+        .footer-content {
+          background-color: rgba(0, 0, 0, 0.70);/* Fondo translúcido para contraste */
+          transition: max-height 0.3s ease;
+        }
+     }
+
+/* -----------------------   RESPONSIVE HEADER-NAV ---------------------------- */
+/* -----------------------   RESPONSIVE HEADER-NAV ---------------------------- */
+/* -----------------------   RESPONSIVE HEADER-NAV ---------------------------- */
+      @media (max-width: 768px) {
+        .logo-img,
+        .logo-img2 {
+          width: 50px;
+        }
+
+        .menu {
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+
+        .menu a {
+          font-size: 1.2rem;
+        }
+
+        .enlace-vibrante img.cartas {
+          width: 50px;
+        }
+        header.header,
+        footer {
+          height: 15vh;
+        }
+      }
+
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: goldenrod;
+  font-size: 3rem;
+  cursor: pointer;
+  font-family: 'Pirata One', cursive; /* Fuente pirata */
+}
+
+.footer-toggle {
+  display: none;
+  background-color: #222;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  width: auto;
+  margin: 0 auto 1rem 1rem;
+  text-align: left;
+  font-family: 'Pirata One', cursive; /* Fuente pirata */
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9); /* Menú nav superior */
+    z-index: 999;
+    padding: 1rem 0;
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .menu a {
+    font-size: 2rem;
+    padding: 1rem 0;
+    color: goldenrod;
+  }
+
+  .menu a:hover {
+    transform: none;
+    color: goldenrod;
+  }
+
+  .menu-toggle {
+    display: block;
+    z-index: 1001;
+    margin: 0 auto;
+    order: 2;
+  }
+
+  .logo-img, .logo-img2 {
+    width: 12vw;
+  }
+
+  header.header {
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .logo-right {
+    order: 3;
+    margin-left: auto;
+  }
+
+  /* ---------------------- FOOTER RESPONSIVO CON FONDO ---------------------- */
+  .footer-content {
+    background-color: rgba(0, 0, 0, 0.75); /* Fondo translúcido para contraste */
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .footer-content.closed {
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .footer-content {
+    transition: max-height 0.3s ease;
+  }
+
+  .footer-toggle {
+    display: block;
+  }
+}
+
+/* --------------------------- VISTA INTERMEDIA ------------------------------ */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .menu {
+    gap: 2rem;
+  }
+
+  .menu a {
+    font-size: 2.2rem;
+  }
+
+  .logo-img {
+    width: 6vw;
+  }
+
+  .logo-img2 {
+    width: 8vw;
+  }
+}

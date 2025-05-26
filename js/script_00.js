@@ -63,6 +63,28 @@ toggleBtn.addEventListener('click', () => {
 
 
 
+// ----------------- PARA ABRIR Y CERRAR EL MENÚ del EN MOVILES, EN EL HEADER    ----------------------
+// ----------------- PARA ABRIR Y CERRAR EL MENÚ del EN MOVILES, EN EL HEADER    ----------------------
+// ----------------- PARA ABRIR Y CERRAR EL MENÚ del EN MOVILES, EN EL HEADER    ----------------------
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("main-menu");
+
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("show");
+  });
+
+  // Opcional: cerrar menú al hacer clic en un enlace
+  document.querySelectorAll("#main-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("show");
+    });
+  });
+});
+// ------------- FIN PARA ABRIR Y CERRAR EL MENÚ del HEADER EN MOVILES, EN EL FOOTER    ----------------------
+
+
+
 
 
 
@@ -101,7 +123,7 @@ behavior: "smooth"
 // --------------------------------  ventana emergente logo ------------------------------------------- 
 // --------------------------------  ventana emergente logo ------------------------------------------- 
 // --------------------------------  ventana emergente logo ------------------------------------------- 
-function openModal(type) {
+/*function openModal(type) {
     if (type === 'about') {
         // Evitar múltiples modales
         if (document.getElementById('aboutModal')) return;
@@ -140,7 +162,7 @@ if (e.target === modal) {
 modal.style.display = 'none';
  }
 });
-});
+});*/
 // -------------------------------- fin ventana emergente logo ---------------------------------------- 
 
 

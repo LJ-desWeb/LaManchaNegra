@@ -53,19 +53,25 @@
     </header> -->
 
     <header class="header d-flex justify-content-between align-items-center px-3">
-        <a href="j_01_solweb_.html" target="_blank " class="logo-left hover-move">
-            <img src="img/000_04_LOGO_04_Sombrero_.webp" alt="Logo info" class="logo-img">
-        </a>
-        <nav class="menu texto-hover text-center py-3"><!-- -->
-                <a href="/index.html" class="elmenu"><p class="titnav">Inicio</p></a>
-                <a href="#seccion1" class="elmenu"><p class="titnav">Busca el Tesoro</p></a>
-                <a href="#seccion2" class="enlace-vibrante"><img src="img/000_05_Cartas_Valencianas_ed_1778_06_.png" alt="2cartas" class="cartas"><p class="titnav">Juego</p></a>
-                <a href="#seccion3" class="menu_03"><p class="titnav"></p>Info.</p></a>
-        </nav>
-        <a href="j_05_login_.html" class="logo-right hover-move">
-            <img src="img/000_07_lego_pirate_02.webp" alt="figura lego para login" class="logo-img2">
-        </a>
-    </header>      
+    <a href="j_01_solweb_.html" target="_blank " class="logo-left hover-move">
+        <img src="img/000_04_LOGO_04_Sombrero_.webp" alt="Logo info" class="logo-img">
+    </a>
+
+    <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú">Menú
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <nav id="main-menu" class="menu texto-hover text-center py-3">
+        <a href="/index.html" class="elmenu"><p class="titnav">Inicio</p></a>
+        <a href="#sec1" class="elmenu"><p class="titnav">Busca el Tesoro</p></a>
+        <a href="#sec2" class="enlace-vibrante"><img src="img/000_05_Cartas_Valencianas_ed_1778_06_.png" alt="2cartas" class="cartas"><p class="titnav">Juego</p></a>
+        <a href="#sec3" class="menu_03"><p class="titnav">Info.</p></a>
+    </nav>
+
+    <a href="j_05_login_.html" class="logo-right hover-move">
+        <img src="img/000_07_lego_pirate_02.webp" alt="figura lego para login" class="logo-img2">
+    </a>
+</header>
 
         <main class="container-fluid" style="height:5000px"><!-- -->
             <!-- -->    
@@ -96,7 +102,7 @@
         <div class="footer-main"></div>
             <button class="footer-toggle" aria-expanded="false">☰ Menú del sitio</button>
             
-            <div class="footer-content">
+            <div class="footer-content closed">
                 <div class="footer-container">
                     <!-- Columna: Logo -->
                     <div class="footer-col">
@@ -106,16 +112,14 @@
                         <address>
                         <p class="parr-1">Contacto </p><br>
                         <a href="mailto:solweb@gmail.com" class="parr-1">solweb@gmail.com</a>
-                        </address>
-                        
-                       
+                        </address>                     
                     </div>
 
                     <!-- Columna: Enlaces -->
                     <div class="footer-col">
                         <h4>Enlaces</h4>
                         <ul>
-                            <li><a href="/">Inicio</a></li>
+                            <li><a href="#sec1">Inicio</a></li>
                             <li><a href="/j_05_registro_.html">Registro</a></li>
                         </ul>
                     </div>
