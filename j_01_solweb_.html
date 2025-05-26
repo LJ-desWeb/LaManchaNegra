@@ -193,8 +193,22 @@ a {
 
 
   <script>
+    
+  function expandAndClose() {
+    const contenedor = document.querySelector('.contenedor_ppal');
+    contenedor.style.transition = 'transform 0.6s ease, opacity 0.6s ease';
+    contenedor.style.transform = 'scale(0.1) rotate(-20deg)';
+    contenedor.style.opacity = '0';
+
+    setTimeout(() => {
+      contenedor.style.display = 'none';
+      // Si quieres redirigir a otra página, descomenta esta línea:
+      // window.location.href = 'otra_pagina.html';
+    }, 600);
+  }
+</script>
    
-  </script>
+  
 </body>
 </html>
 
