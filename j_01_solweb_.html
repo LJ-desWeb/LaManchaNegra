@@ -47,10 +47,14 @@ html, body {
 .pergamino_contenedor {
   position: relative;
   width: 100%;
-  height: 100%;
-  background: url('img/001_01_pergamino_solweb_05_.webp') no-repeat center center;
-  background-size: cover;
+  height: auto;
 }
+.pergamino_img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 
 /* Animación de entrada */
 @keyframes desenrollar {
@@ -77,7 +81,7 @@ html, body {
 }
 
 .textos h1 {
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-size: clamp(2rem, 6vw, 7rem);
   color: #362808;
 }
 
@@ -104,24 +108,25 @@ a {
 }
 
 /* Sello de lacre */
+/* Sello de lacre */
 .lacre {
   position: absolute;
   bottom: 18%;
-  right: 10%;
+  right: 20%;
   width: 15%;
   z-index: 1;
   transition: transform 0.3s ease;
 }
-
 .lacre:hover {
   transform: scale(1.1);
 }
 
+
 /* Botón de cierre */
 .bot_cierre {
   position: absolute;
-  bottom: 10%;
-  left: 10%;
+  bottom: 20%;
+  left: 25%;
   background: url('img/001_01_mancha_03_svgsilh.com303242_483x512_cerrar_.png') no-repeat center center;
   background-size: cover;
   border: none;
@@ -136,64 +141,68 @@ a {
   transform: scale(1.1);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+
+
+
+  /* Contenedor visual del pergamino */
+ @media (max-width: 768px) {
   .contenedor_ppal {
     width: 95vw;
-    aspect-ratio: unset;
-  }
-  /* Contenedor visual del pergamino */
-  .pergamino_contenedor {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: url('img/001_01_pergamino_solweb_05_.webp') no-repeat center center;
-  background-size: contain;
-}
-
-  .lacre {
-    width: 25%;
+    height: auto;
   }
 
-  .bot_cierre {
-    width: 25%;
-    height: 15%;
+  .pergamino_img {
+    width: 100%;
+    height: auto;
   }
 
   .textos h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .textos p {
     font-size: 1rem;
   }
-}
 
+   .lacre {
+    width: 15%;
+    bottom: 20%;
+    right: 28%;
+  }
+
+  .bot_cierre {
+    width: 22%;
+    bottom: 20%;
+    left: 28%;
+  }
+
+}
 
   </style>
 </head>
 <body>
  
-  <div class="contenedor_ppal">
-    <div class="pergamino_contenedor">
-      <div class="textos">
-        <a href="solweb_estudio.html" target="_blank">
-          <h1 class="solweb">SolWeb Estudio</h1>
-        </a>
-        <p>Diseñado por Luis J. Borge</p>
-      </div>
+<div class="contenedor_ppal">
+  <div class="pergamino_contenedor">
+    <img src="img/001_01_pergamino_solweb_05_.webp" alt="Pergamino SolWeb" class="pergamino_img">
 
-      <a href="solweb_estudio.html">
-        <img src="img/001_02_lacre_solweb_03_01_a_.png" alt="Sello de lacre" class="lacre">
+    <div class="textos">
+      <a href="solweb_estudio.html" target="_blank">
+        <h1 class="solweb">SolWeb Estudio</h1>
       </a>
-
-      <button class="bot_cierre" onclick="expandAndClose()"></button>
+      <p>Diseñado por Luis J. Borge</p>
     </div>
-  </div>
 
+    <a href="solweb_estudio.html">
+      <img src="img/001_02_lacre_solweb_03_01_a_.png" alt="Sello de lacre" class="lacre">
+    </a>
+
+    <button class="bot_cierre" onclick="expandAndClose()"></button>
+  </div>
+</div>
 
   <script>
-    
+
   function expandAndClose() {
     const contenedor = document.querySelector('.contenedor_ppal');
     contenedor.style.transition = 'transform 0.6s ease, opacity 0.6s ease';
@@ -201,9 +210,9 @@ a {
     contenedor.style.opacity = '0';
 
     setTimeout(() => {
-      contenedor.style.display = 'none';
+      //contenedor.style.display = 'none';
       // Si quieres redirigir a otra página, descomenta esta línea:
-      // window.location.href = 'otra_pagina.html';
+      window.location.href = 'index.html';
     }, 600);
   }
 </script>
