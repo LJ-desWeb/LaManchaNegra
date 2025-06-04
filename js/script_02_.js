@@ -24,13 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // NOTA: las rutas “img/…” aquí ya asumen que tu index.html está en la raíz y existe /img/…
     const baseImgs = [
         'img/004_barco-2palos.webp',
-        /*'img/004_barco-cañon-humo.webp',
+        'img/004_barco-cañon-humo.webp',
         'img/004_barco-mayflower.webp',
         'img/004_calavera-huesos.webp',
         'img/004_mapa1.webp',
         'img/004_mapa2.webp',
         'img/004_pirata.webp',
-        'img/004_telescopio.webp'*/
+        'img/004_telescopio.webp'
     ];
     const imagenes = [...baseImgs, ...baseImgs];
     const totalParejas = baseImgs.length;
