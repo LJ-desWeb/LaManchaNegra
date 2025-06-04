@@ -1,0 +1,197 @@
+/*  -------------------------- MENSAJE INVISIBLE - SECCIÓN 1      -----------------------------------------------------*/
+/*  -------------------------- MENSAJE INVISIBLE - SECCIÓN 1      -----------------------------------------------------*/
+/*  -------------------------- MENSAJE INVISIBLE - SECCIÓN 1      -----------------------------------------------------*/
+main {
+  padding-top: 120px; /* asegúrando que este espacio sea igual o mayor al header */
+}
+.titulo_0_0{
+  margin-top: 4rem;
+  font-size:7rem;
+  text-align: center;
+  color: rgb(97, 84, 50); 
+}
+.titulo_1_{
+  font-size: 4rem;
+  text-align: center;
+  color: rgb(97, 84, 50); 
+}
+
+.pergamino-container {
+  position: relative;
+  margin-top: 100px; /* ajustado según la altura del header */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 90%;
+  margin: 0 auto;
+  /*border: 3px blue solid;*/
+}
+
+.pergamino {
+  width: 100%;
+  height: auto;
+  display: block;
+  z-index: 0;
+  /*border: 3px green solid;*/
+}
+
+.texto_invisible {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+  z-index: 1;
+  overflow: auto;
+  font-size: 5rem;
+  color: rgba(138, 3, 3, 1); /* 70% opaco */
+  line-height: 1.6;
+  text-align: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+/* Inicialmente, todas las palabras son transparentes */
+.hidden-text span {
+    opacity: 0;
+    transition: opacity 0.3s;
+    cursor: default;
+}
+
+/* Cuando se pasa el cursor por encima de una palabra */
+.hidden-text span:hover {
+    opacity: 1 !important;
+}
+/* Mostrar todo el texto al pasar sobre la última frase */
+.show-all span {
+    opacity: 1 !important;
+}
+/* Ocultar la brújula inicialmente */
+.brujula {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+    position:absolute;
+    width: 20vh;
+    bottom:12vh;
+    right: 5vw;
+}
+/* Mostrar brújula permanentemente /* cuando activado */
+.brujula.visible {
+    opacity: 1;
+    pointer-events: auto;
+    animation: girar-izq-der 3s infinite ease-in-out;
+     
+}
+ .brujula-link {
+  position: absolute;
+  bottom: 12vh;
+  right: 5vw;
+  opacity: 0;
+  pointer-events: none; /* 🔒 Inactivo inicialmente */
+  transition: opacity 0.5s ease-in-out;
+  display: block;       /* ✅ Asegura que el <a> ocupe todo el área de la imagen */
+  z-index: 10;          /* ✅ Se asegura de estar por encima */
+}
+
+.brujula-link.visible {
+  opacity: 1;
+  pointer-events: auto; /* 🔓 Se activa */
+  cursor: pointer;
+}
+@keyframes girar-izq-der {/* Animación de giro */
+  0% { transform: rotate(-10deg); }
+  50% { transform: rotate(10deg); }
+  100% { transform: rotate(-10deg); }
+}
+
+
+
+
+
+/* ------------------------------------ MÓVIL 481px a 1024px ------------------------------------ */
+
+@media (min-width: 481px) and (max-width: 1024px) {/* Adaptación para móvil */
+  .titulo_0_0{
+  margin-top: 1rem;
+  font-size: 2rem;
+  }
+
+  .titulo_1_ {
+    font-size: 1.5rem;
+  }
+
+  .texto_invisible {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    top: 8%;
+    left: 5%;
+    right: 5%;
+    bottom: 8%;
+  }
+
+  .pergamino-container {
+    flex-direction: column;
+  }
+   contenido-pergamino {
+    padding: 6% 7%;
+  }
+
+  .brujula {
+    width: 20px;
+  }
+}
+
+/* ------------------------------------ MÓVIL PEQUEÑO < 481px ------------------------------------ */
+@media (max-width: 480px) {
+  .titulo_0_0 {
+    font-size: 2rem;        /* Ajuste grande a pequeño */
+    margin-top: 1rem;
+  }
+
+  .titulo_1_ {
+    font-size: 1.5rem;
+  }
+
+  .texto_invisible {
+    font-size: 1.1rem;      /* Reduce texto en pergamino */
+    line-height: 1.4;
+    top: 8%;
+    left: 5%;
+    right: 5%;
+    bottom: 8%;
+  }
+
+  .pergamino-container {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+
+  .brujula {
+    width: 15vw; /* Escala proporcional al ancho */
+  }
+
+  .brujula-link {
+    bottom: 5vh;
+    right: 5vw;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

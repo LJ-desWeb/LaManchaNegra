@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Aventura,tesoro,pirata,juego,libro,Solweb,estudio">
+    <meta name="author" content="Solweb Estudio">
+    <meta name="author" content="Luis J. Borge">
+
+
+   <!-- <link rel="shortcut icon" href="img/000_01_favicon.png" type="image/x-icon" /> -->
+            <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96" />
+            <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg" />
+            <link rel="shortcut icon" href="img/favicon/favicon.ico" />
+            <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" />
+            <link rel="manifest" href="img/favicon/site.webmanifest" />
+
+
+    <title>Info.: SolWeb Estudios</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+  
+  <style>
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Pirata One', cursive;
+  background: url('img/001_00_-fotoarena-_11_.webp') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Contenedor central */
+.contenedor_ppal {
+  width: 90vw;
+  max-width: 1200px;
+  aspect-ratio: 3 / 2.5;
+  animation: desenrollar 1.5s ease-out;
+  overflow: hidden;
+}
+
+/* Contenedor visual del pergamino */
+.pergamino_contenedor {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.pergamino_img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* Animación de entrada */
+@keyframes desenrollar {
+  0% {
+    transform: scaleY(0.1) translateY(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Textos dentro del pergamino */
+.textos {
+  position: absolute;
+  top: 22%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  color: #2d1200;
+  text-align: center;
+  z-index: 1;
+}
+
+.textos h1 {
+  font-size: clamp(2rem, 6vw, 7rem);
+  color: #362808;
+}
+
+a {
+  text-decoration: none;
+}
+
+.solweb:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  background-image: url('img/000_06_plata_.jpg');
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 1px #362808;
+}
+
+.textos p {
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  margin-top: 2rem;
+  color: #2d1200;
+}
+
+/* Sello de lacre */
+/* Sello de lacre */
+.lacre {
+  position: absolute;
+  bottom: 18%;
+  right: 20%;
+  width: 15%;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+.lacre:hover {
+  transform: scale(1.1);
+}
+
+
+/* Botón de cierre */
+.bot_cierre {
+  position: absolute;
+  bottom: 15%;
+  left: 17%;
+  background: url('img/001_01_mancha_03_svgsilh.com303242_483x512_cerrar_.png') no-repeat center center;
+  background-size: cover;
+  border: none;
+  width: 20%;
+  height: 30%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 2;
+}
+
+.bot_cierre:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+  /* Contenedor visual del pergamino */
+ @media (max-width: 768px) {
+  .contenedor_ppal {
+    width: 95vw;
+    height: auto;
+  }
+
+  .pergamino_img {
+    width: 100%;
+    height: auto;
+  }
+
+  .textos h1 {
+    font-size: 1.8rem;
+  }
+
+  .textos p {
+    font-size: 1rem;
+  }
+
+   .lacre {
+    width: 15%;
+    bottom: 20%;
+    right: 28%;
+  }
+
+  .bot_cierre {
+    width: 22%;
+    bottom: 20%;
+    left: 28%;
+  }
+
+}
+
+  </style>
+</head>
+<body>
+ 
+<div class="contenedor_ppal">
+  <div class="pergamino_contenedor">
+    <img src="img/001_01_pergamino_solweb_05_.webp" alt="Pergamino SolWeb" class="pergamino_img">
+
+    <div class="textos">
+      <a href="solweb_estudio.html" target="_blank">
+        <h1 class="solweb">SolWeb Estudio</h1>
+      </a>
+      <p>Diseñado por Luis J. Borge</p>
+    </div>
+
+    <a href="solweb_estudio.html">
+      <img src="img/001_02_lacre_solweb_03_01_a2_.png" alt="Sello de lacre" class="lacre">
+    </a>
+
+    <button class="bot_cierre" onclick="expandAndClose()"></button>
+  </div>
+</div>
+
+  <script>
+
+  function expandAndClose() {
+    const contenedor = document.querySelector('.contenedor_ppal');
+    contenedor.style.transition = 'transform 0.6s ease, opacity 0.6s ease';
+    contenedor.style.transform = 'scale(0.1) rotate(-20deg)';
+    contenedor.style.opacity = '0';
+
+    setTimeout(() => {
+      //contenedor.style.display = 'none';
+      // Si quieres redirigir a otra página, descomenta esta línea:
+      window.location.href = 'index.html';
+    }, 600);
+  }
+</script>
+   
+  
+</body>
+</html>
+
+
+
+
+
+
