@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
             popup.dataset.estado = "perdido"; // 🔴 MARCAR COMO DERROTA
         } else {
             mensaje.textContent = "¡Felicidades, has ganado!";
-            gif.src = '../img/004_gif_cannon_.gif';
+            gif.src = 'img/004_gif_cannon_.gif';
             gif.style.display = "block";
             sonidos.victoria.play();
             sonidos.disparo.play();
